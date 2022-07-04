@@ -1,1 +1,12 @@
+a function is passed to another function as an argument is called callback function
 
+function finalCall(nextRound){
+console.log(" yes")
+nextRound();
+}
+
+function nextRound(){
+console.log("result")
+}
+
+finalCall(nextRound)
