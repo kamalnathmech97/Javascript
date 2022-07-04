@@ -8,3 +8,7 @@ var x = 24;
 function getName(){
 console.log(" kamal");
 }
+
+OUTPUT :
+kamal
+undefined
