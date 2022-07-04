@@ -1,1 +1,10 @@
+1.In var, Hoisting  allows to use functions & variables , before they are declared.
+2.Declare all variables at the beginning of every scope
 
+getName();
+console.log(x);
+
+var x = 24;
+function getName(){
+console.log(" kamal");
+}
