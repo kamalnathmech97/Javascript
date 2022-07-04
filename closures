@@ -1,0 +1,35 @@
+closures is a combination of function and its ability to remember value in its outer scope.
+
+a function along with lexical scope forms an closure.
+
+example 1:
+
+function myName (){
+var firstName = "kamal"
+function myName(){
+console.log(firstName)
+}
+return myName;
+}
+var result = myName();
+result();
+
+OUTPUT : kamal
+
+example 2:
+const e = 10;
+function sum(a) {
+  return function (b) {
+    return function (c) {
+      // outer functions scope
+      return function (d) {
+        // local scope
+        return a + b + c + d + e;
+      };
+    };
+  };
+}
+
+console.log(sum(1)(2)(3)(4));
+
+OUTPUT : 10
