@@ -1,4 +1,6 @@
 1.In var, Hoisting  allows to use functions & variables , before they are declared.
+
+to avoid hoisting :
 2.Declare all variables at the beginning of every scope
 
 getName();
