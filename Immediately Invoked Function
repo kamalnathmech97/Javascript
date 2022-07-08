@@ -1,4 +1,22 @@
 An immediately invoked function expression is a way to execute functions, as soon as they are executed.
+
+Example:
 (function () {
 
 }())
+
+Normal:
+let num1 =10;
+let num2= 20;
+
+(function(add){
+    console.log(num1+num2);
+})()
+
+Arrow:
+let num1 =10;
+let num2= 20;
+
+((add) =>{
+    console.log(num1+num2);
+})()
