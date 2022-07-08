@@ -1,0 +1,5 @@
+It is a function that execute a JavaScript statement EVERY x interval.
+
+setInterval(function () {
+    somethingElse();
+}, 2000);
