@@ -1,0 +1,7 @@
+setTimeout():
+
+It is a function that execute a JavaScript statement AFTER x interval.
+
+setTimeout(function () {
+    something();
+}, 1000);
