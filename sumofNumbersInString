@@ -1,0 +1,9 @@
+unction sumDigitsFromString (str){
+  var sum =0;
+  var numbers = str.match(/\d+/g).map(Number)
+  for(var i=0; i<numbers.length; i++){
+  sum = sum+numbers[i];
+}
+return sum;
+}
+sumDigitsFromString("hi8 m16y name is 108kuldip");
