@@ -1,4 +1,4 @@
-unction sumDigitsFromString (str){
+function sumDigitsFromString (str){
   var sum =0;
   var numbers = str.match(/\d+/g).map(Number)
   for(var i=0; i<numbers.length; i++){
