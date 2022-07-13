@@ -3,16 +3,14 @@ closures is a combination of function and its ability to remember value in its o
 a function along with lexical scope forms an closure.
 
 example 1:
-
-function myName (){
-var firstName = "kamal"
 function myName(){
-console.log(firstName)
+    var name = "kamal"
+    function lastName(){
+        console.log(name);
+    }
+    return lastName()
 }
-return myName;
-}
-var result = myName();
-result();
+myName()
 
 OUTPUT : kamal
 
