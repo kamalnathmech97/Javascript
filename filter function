@@ -1,0 +1,11 @@
+           //filter function
+           
+           let age = [18, 24, 36, 49, 10];
+           
+           let voters = age.filter(perfectVoters)
+           
+           function perfectVoters(agecheck){
+               return agecheck >=15
+           }
+           
+           console.log(voters);
