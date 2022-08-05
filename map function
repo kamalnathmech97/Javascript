@@ -1,0 +1,24 @@
+1.// map function in numbers :
+
+let arr= [5,10,15,20];
+let modifiedArray = arr.map(double)
+
+function double(num){
+    return num*10
+}
+console.log(modifiedArray)
+
+
+2.// map function in array of objects :
+
+   let checkName =[
+              {name:"kamal", lastName:"nath"},
+              {name:"kishore", lastName:"VV"}
+                  ];
+let fullName = checkName.map(testing);
+
+function testing (array){
+    return `${array.name} ${array.lastName}`;
+}
+
+console.log(fullName);
