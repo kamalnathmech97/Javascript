@@ -1,4 +1,4 @@
-           //filter function
+           //filter function array of numbers
            
            let age = [18, 24, 36, 49, 10];
            
@@ -9,3 +9,20 @@
            }
            
            console.log(voters);
+
+
+           //filter function  array of objects
+           
+          let pokemon =[
+           {name:"pikachu", power:"thunder"},
+           {name:"charminar", power:"fire" },
+           {name:"rhino", power:"thunder"}
+           ];
+           
+           let findPower = pokemon.filter(find);
+           
+           function find(getPower){
+               return getPower.power =="thunder";
+           }
+           
+           console.log(findPower);
