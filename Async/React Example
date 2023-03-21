@@ -1,0 +1,43 @@
+To use the value of a Promise in React, you can use a useEffect() hook with an empty dependency array to wait for the promise to resolve, 
+and store the result in the value of a useState hook.
+
+Here’s an example of using this method to get a random cat, using the CatAAS API.
+
+function PromisesPage() {
+    const [catUrl, setCatUrl] = useState('');
+    const [error, setError] = useState(false);
+    const [state, setState] = useState('');
+    useEffect(() => {
+        setState('loading');
+        axios
+            .get('https://cataas.com/cat?json=true')
+            .then((res) => {
+                console.log(res);
+                setState('success');
+                setCatUrl('https://cataas.com' + res.data.url);
+            })
+            .catch((err) => {
+                console.error('Error:', err);
+                setState('error');
+                setError(err);
+            });
+    }, []);
+    if (state === 'error')
+        return (
+            <h1>
+
+                {error.toString()}
+            </h1>
+        );
+    return (
+        <div>
+            <div>
+                {state === 'loading' ? (
+                    <h1>Loading...</h1>
+                ) : (
+                    <img src="{catUrl}" />
+                )}
+            </div>
+        </div>
+    );
+}
