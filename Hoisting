@@ -42,5 +42,10 @@ undefined
 
 EXAMPLE 3:
 
+normalFunc()
+const normalFunc = () => {
+return "Arrow Function"
+}
 
-
+OUTPUT : ReferenceError: Cannot access 'arrowFunc' before initialization
+let and const will be in temporal dead zone untill its declared.
