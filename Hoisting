@@ -1,7 +1,32 @@
 1.In var, Hoisting  allows to use functions & variables , before they are declared.
 
-to avoid hoisting :
-2.Declare all variables at the beginning of every scope
+To avoid hoisting :
+2.Declare all variables at the beginning of every scope.
+
+points to note :
+functional expression and functional declaration :
+
+EXAMPLE 1:
+
+* functional expression:
+
+alert(foo());                
+var foo = function() { 
+return 5; 
+}
+
+OUTPUT : ERROR! foo wasn't loaded yet
+
+* functional declaration:
+
+alert(foo());                
+function foo() {
+return 5; 
+}
+
+OUTPUT : 5 (Declarations are loaded before any code can run)
+
+EXAMPLE 2:
 
 getName();
 console.log(x);
@@ -14,3 +39,8 @@ console.log(" kamal");
 OUTPUT :
 kamal
 undefined
+
+EXAMPLE 3:
+
+
+
