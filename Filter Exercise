@@ -1,0 +1,40 @@
+import "./styles.css";
+import React, { useState } from "react";
+
+export default function App() {
+  const checklist = [
+    "Bulbasaur",
+    "Ivysaur",
+    "Venusaur",
+    "Charmander",
+    "Charmeleon"
+  ];
+
+  const [filterList, setFilterList] = useState(checklist);
+
+  const filterData = (event) => {
+    if (event.target.value === "") {
+      setFilterList(checklist);
+      return;
+    }
+
+    const filteredValues = checklist.filter(
+      (item) =>
+        item.toLowerCase().indexOf(event.target.value.toLowerCase()) !== -1
+    );
+    setFilterList(filteredValues);
+  };
+
+  return (
+    <div className="App">
+      <div>
+        {" "}
+        Search :
+        <input type="text" placeholder="Search Box" onChange={filterData} />
+      </div>
+      {filterList.map((item, index) => (
+        <div key={index}>{item}</div>
+      ))}
+    </div>
+  );
+}
