@@ -1,0 +1,67 @@
+let a = [10, 9, 7, 6, 0, -1]
+let n = a.length;
+
+mergeSort(a, 0, n-1);
+
+printArray(a, n)
+
+function printArray(a, n){
+  for(let i=0; i<n; i++){
+    console.log(a[i])
+  }
+}
+
+function mergeSort(a,l,r){
+  if(l>= r){
+    return;
+  }
+  
+  var mid = l + parseInt((r-l)/2)
+    
+  mergeSort(a,l,mid);
+  mergeSort(a,mid+1, r);
+  merge(a,l,mid,r)
+}
+
+function merge(a,l,mid,r){
+  let n1 = mid - l + 1;
+  let n2 = r - mid;
+  
+  let left = new Array(n1);
+  let right = new Array(n2);
+  
+  for(let i=0; i<n1; i++){
+    left[i] = a[l+i]
+  }
+  
+  for(let j=0; j<n2; j++){
+    right[j] = a[mid+1+j]
+  }
+  
+  let i = 0;
+  let j = 0; 
+  let k = l;
+  
+  while(i<n1 && j<n2){
+    if(left[i] <= right[j]){
+      a[k] = left[i]
+      i++
+    }else{
+      a[k] = right[j]
+      j++
+    }
+    k++
+  }
+  
+  while(i< n1){
+    a[k] = left[i]
+    i++
+    k++
+  }
+  
+  while(j<n2){
+    a[k]= right[j]
+    j++
+    k++
+  }
+}
