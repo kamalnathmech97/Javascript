@@ -1,0 +1,15 @@
+minimum number in array :
+
+let arr=[-10, 2, 3, 20]
+
+function reducerTest(accumulator, currentValue){
+ if(accumulator < currentValue){
+   currentValue = accumulator
+ }
+  return currentValue
+}
+let sum = arr.reduce(reducerTest, Number.MAX_VALUE)
+console.log(sum)
+
+
+
