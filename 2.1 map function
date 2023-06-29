@@ -1,3 +1,8 @@
+map() transforms every element in an array individually and creates a new array. 
+filter() removes elements that are not required and creates a new array containing the ones needed. 
+Finally, reduce() reduces all array elements into a single value
+
+
 1.// map function in numbers :
 
 let arr= [5,10,15,20];
