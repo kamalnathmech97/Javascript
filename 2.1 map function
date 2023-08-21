@@ -27,3 +27,45 @@ function testing (array){
 }
 
 console.log(fullName);
+
+const util = require('util');
+
+3.map function with subchild
+const employees = [
+  {
+    id: 1,
+    name: 'Alice',
+    role: 'Manager',
+    children: [
+      { id: 101, name: 'John', age: 10 },
+      { id: 102, name: 'Emily', age: 8 }
+    ]
+  },
+  {
+    id: 2,
+    name: 'Bob',
+    role: 'Supervisor',
+    children: [
+      { id: 201, name: 'Alex', age: 12 },
+      { id: 202, name: 'Sophia', age: 9 }
+    ]
+  }
+];
+
+const employeesWithChildren = employees.map(employee => {
+  return {
+    Id: employee.id,
+    Name: employee.name,
+    Role: employee.role,
+    Children: employee.children.map(child => {
+      return {
+        ChildId: child.id,
+        ChildName: child.name,
+        ChildAge: child.age
+      };
+    })
+  };
+});
+
+console.log(employeesWithChildren);
+
