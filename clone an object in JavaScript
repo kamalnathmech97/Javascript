@@ -1,0 +1,14 @@
+1. shallow copy : It will change the originalObject. 
+
+const originalObject = { key1: 'value1', key2: 'value2' };
+const clonedObject = { ...originalObject };
+
+console.log(clonedObject); 
+// Output: { key1: 'value1', key2: 'value2' }
+
+2. Deep Copy : It will not change the OriginalObject. This is recommendable. 
+
+const originalObject = { key1: 'value1', key2: 'value2' };
+const clonedObject = Object.assign({}, originalObject);
+
+console.log(clonedObject); // Output: { key1: 'value1', key2: 'value2' }
