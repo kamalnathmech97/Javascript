@@ -1,0 +1,9 @@
+function add(a, b) {    // parameter 
+  return a + b;
+}
+
+const result = add(3, 5); // 3 and 5 are arguments passed to the function
+
+Parameters are defined in the function declaration and act as placeholders for values.
+Arguments are the actual values that are passed to the function when it's called.
+Parameters and arguments are closely related. The values of arguments are assigned to the corresponding parameters when the function is executed.
