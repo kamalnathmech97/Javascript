@@ -1,0 +1,78 @@
+1.DOM Node Structure:
+
+
+Document Node (<!DOCTYPE html>)
+├── Element Node (<html>)
+│   ├── Element Node (<head>)
+│   │   ├── Element Node (<title>)
+│   │   │   └── Text Node ("DOM Nodes Example")
+│   │   └── ...
+│   └── Element Node (<body>)
+│       ├── Element Node (<h1>, id="main-heading")
+│       │   └── Text Node ("Welcome to the DOM")
+│       ├── Element Node (<p>)
+│       │   ├── Text Node ("This is a ")
+│       │   ├── Element Node (<strong>)
+│       │   │   └── Text Node ("paragraph")
+│       │   ├── Text Node (" with ")
+│       │   ├── Element Node (<em>)
+│       │   │   └── Text Node ("emphasis")
+│       │   └── Text Node (".")
+│       ├── Element Node (<img>, src="image.jpg", alt="A beautiful image")
+│       └── ...
+└── ...
+
+
+2.Accessing Elements:
+
+getElementById(): Retrieves an element by its unique ID.
+querySelector(): Retrieves the first element that matches a CSS selector.
+querySelectorAll(): Retrieves all elements that match a CSS selector.
+
+3.Changing Content:
+
+Certainly! Here's a summarized set of notes for using `textContent`, `innerText`, and `innerHTML` to manipulate the DOM:
+
+### Changing Content in the DOM
+
+#### `textContent`
+- The `textContent` property is used to modify or retrieve the text content of an element.
+- It treats text as plain text and does not interpret HTML tags within the content.
+- Setting `textContent` replaces existing content with the specified text.
+
+Example:
+```javascript
+let element = document.getElementById('myElement');
+element.textContent = 'New text content';
+```
+
+#### `innerText`
+- The `innerText` property is used to modify or retrieve the visible text content of an element.
+- It respects CSS styling and may not display content that's set to be hidden by styles.
+- Like `textContent`, setting `innerText` replaces existing content with the specified text.
+
+Example:
+```javascript
+let paragraph = document.querySelector('p');
+paragraph.innerText = 'Updated paragraph content';
+```
+
+#### `innerHTML`
+- The `innerHTML` property is used to modify or retrieve the HTML content of an element.
+- It can include both text and HTML tags, allowing you to create more complex content.
+- Caution: When setting `innerHTML`, ensure that you sanitize any user-generated or untrusted HTML to prevent security vulnerabilities like XSS.
+
+Example:
+```javascript
+let span = document.querySelector('span');
+span.innerHTML = '<em>italic</em> text';
+```
+
+### Note:
+- When modifying content with `textContent`, `innerText`, or `innerHTML`, be aware that the existing content will be replaced.
+- Consider using these properties along with CSS classes for styling and consistent presentation.
+- Always validate and sanitize any HTML that you insert using `innerHTML` to prevent security risks.
+- While `textContent` and `innerText` are safer for text manipulation, `innerHTML` provides more flexibility when working with HTML content.
+
+Remember that using these methods helps you manipulate the content within your web page, allowing you to create dynamic and interactive user experiences.
+
