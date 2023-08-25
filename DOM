@@ -74,5 +74,41 @@ span.innerHTML = '<em>italic</em> text';
 - Always validate and sanitize any HTML that you insert using `innerHTML` to prevent security risks.
 - While `textContent` and `innerText` are safer for text manipulation, `innerHTML` provides more flexibility when working with HTML content.
 
-Remember that using these methods helps you manipulate the content within your web page, allowing you to create dynamic and interactive user experiences.
+4. Modifying Attributes:
+
+Certainly! Here are examples of using the `getAttribute()` and `setAttribute()` methods to work with attributes in the DOM.
+
+Assume you have the following HTML structure:
+
+```html
+<img id="myImage" src="image.jpg" alt="A beautiful image">
+```
+
+**getAttribute():**
+
+The `getAttribute()` method is used to retrieve the value of an attribute of an element.
+
+
+let image = document.getElementById('myImage');
+let altValue = image.getAttribute('alt');
+console.log(altValue); // Outputs: "A beautiful image"
+
+
+**setAttribute():**
+
+The `setAttribute()` method is used to set or change the value of an attribute of an element.
+
+let image = document.getElementById('myImage');
+image.setAttribute('alt', 'An incredible photograph');
+
+
+In this example, the `alt` attribute of the `<img>` element is changed from "A beautiful image" to "An incredible photograph".
+
+
+
+- When using `getAttribute()`, you pass the name of the attribute you want to retrieve as a parameter.
+- When using `setAttribute()`, you provide both the name of the attribute and the new value as parameters.
+- Attribute names are case-sensitive. For example, `getAttribute('Alt')` won't work the same as `getAttribute('alt')`.
+
+These methods allow you to work with attributes like `src`, `alt`, `href`, `class`, and more to dynamically modify elements in your web page.
 
