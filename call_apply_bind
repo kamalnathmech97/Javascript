@@ -1,0 +1,40 @@
+1.In a function, this refers to the global object:
+
+function globalThisExample() {
+  console.log(this); // `this` refers to the global object (e.g., `window` in a browser or `global` in Node.js)
+}
+
+globalThisExample();
+
+2.In a function, in strict mode, this is undefined:
+
+'use strict';
+
+function strictThisExample() {
+  console.log(this); // `this` is `undefined` in strict mode
+}
+
+strictThisExample();
+
+3.In an event, this refers to the element that received the even
+<button id="myButton">Click me</button>
+
+<script>
+document.getElementById('myButton').addEventListener('click', function() {
+  console.log(this); // `this` refers to the button element
+});
+</script>
+
+4.Methods like call(), apply(), and bind() can refer this to any object:
+
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+};
+
+function greet() {
+  console.log(`Hello, ${this.firstName} ${this.lastName}`);
+}
+
+greet.call(person); // Using call() to set `this` to the `person` object
+
