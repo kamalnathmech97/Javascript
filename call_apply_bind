@@ -70,7 +70,8 @@ const answer = ["Lieutenant"]
 const result = greetings.bind(person, answer)
 result();
 
-
+call and apply are used to invoke a function immediately with a specified this value and arguments.
+bind is used to create a new function with a specific this value and optional initial arguments but doesn't execute the function right away. You can call the bound function later.
 
 
 
