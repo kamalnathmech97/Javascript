@@ -3,7 +3,7 @@ An immediately invoked function expression is a way to execute functions, as soo
 Example:
 (function () {
 
-}())
+})()
 
 Normal:
 let num1 =10;
