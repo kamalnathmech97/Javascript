@@ -27,6 +27,8 @@ document.getElementById('myButton').addEventListener('click', function() {
 
 4.Methods like call(), apply(), and bind() can refer this to any object:
 
+1.call()
+
 const person = {
   firstName: "John",
   lastName: "Doe",
@@ -37,4 +39,38 @@ function greet() {
 }
 
 greet.call(person); // Using call() to set `this` to the `person` object
+
+2.apply()
+
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+};
+
+function greet(greeting) {
+  console.log(`${greeting}, ${this.firstName} ${this.lastName}`);
+}
+
+const args = ["Hello"]; // An array of arguments
+greet.apply(person, args); // Using apply() to set `this` to the `person` object and pass arguments
+
+3.bind()
+const person = {
+  firstname: "kamalnath",
+  lastname: "vijayakumar"
+}
+
+
+function greetings(answer){
+  console.log(`${answer} ${this.firstname} ${this.lastname}`)
+}
+
+const answer = ["Lieutenant"]
+
+const result = greetings.bind(person, answer)
+result();
+
+
+
+
 
