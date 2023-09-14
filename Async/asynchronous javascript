@@ -1,0 +1,33 @@
+1.callback :
+
+function outReview(UpmiresCall){
+  setTimeout(() => {
+    const camera = {
+      impact : "inline",
+      pitching: "outside off"
+    }
+  UpmiresCall(camera)
+  }, 2000);
+}
+
+function UpmiresCall(data){
+  console.log("Decision is", data ,"NotOut")
+}
+
+outReview(UpmiresCall)
+console.log("upmire is checking footage")
+
+
+2.promise :
+
+const examplePromise = new Promise((resolve, reject) => {
+  let check = true
+  setTimeout(() => {
+    return check ? resolve("the data is collected"): reject("data not found")
+  }, 1000);
+})
+examplePromise.then((value => {console.log(value)})).catch((error => {console.log(error)}))
+
+3.async/await:
+
+
