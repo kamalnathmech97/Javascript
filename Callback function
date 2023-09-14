@@ -10,3 +10,21 @@ console.log("result")
 }
 
 finalCall(nextRound)
+
+function outReview(UpmiresCall){
+  setTimeout(() => {
+    const camera = {
+      impact : "inline",
+      pitching: "outside off"
+    }
+  UpmiresCall(camera)
+  }, 2000);
+}
+
+function UpmiresCall(data){
+  console.log("Decision is", data ,"NotOut")
+}
+
+outReview(UpmiresCall)
+
+console.log("upmire is checking footage")
