@@ -29,5 +29,24 @@ const examplePromise = new Promise((resolve, reject) => {
 examplePromise.then((value => {console.log(value)})).catch((error => {console.log(error)}))
 
 3.async/await:
+async function exampleTest(){
+ return new Promise((resolve, reject)=> {
+   let flag = true;
+   
+   setTimeout(() =>{
+     return flag ? resolve("successfully completed") : reject ("data fialure")
+   }, 1000);
+ })
+}
 
+async function mainFunction(){
+try{
+  const value = await exampleTest();
+  console.log(value)
+}catch(error){
+  console.log(error)
+}
+}
+
+mainFunction()
 
