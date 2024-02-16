@@ -1,0 +1,29 @@
+function bracketFunction(Input) {
+    let stack = [];
+    const bracketsMap = {
+        ')': '(',
+        '}': '{',
+        ']': '['
+    };
+
+    for (let i = 0; i < Input.length; i++) {
+        let char = Input.charAt(i);
+
+        if (char === '(' || char === '{' || char === '[') {
+            stack.push(char);
+        } else {
+            let top = stack.pop();
+            if (top !== bracketsMap[char]) {
+                return false;
+            }
+        }
+    }
+    
+   
+    return stack.length === 0;
+}
+
+
+const Input = "((({}[)]))";
+const res = bracketFunction(Input);
+console.log(res); 
