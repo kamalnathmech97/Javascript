@@ -1,10 +1,19 @@
 GET: Requests data from a specified resource. GET requests should only retrieve data and should not have any other effect on the server.
+
 POST: Submits data to be processed to a specified resource. It can also be used to create a new resource.
+
 PUT: Updates a specified resource with the provided data. It replaces the existing resource or creates a new one if it doesn't exist.
+
 DELETE: Deletes the specified resource.
+
 PATCH: Applies partial modifications to a resource.
+
 HEAD: Requests the headers of a resource without actually retrieving the resource itself. It's often used to check for the existence or freshness of a resource.
+
 OPTIONS: Returns the HTTP methods supported by the server for the specified URL. It's commonly used for cross-origin resource sharing (CORS) requests.
+
 TRACE: Echoes back the received request, which is useful for debugging purposes.
+
 CONNECT: Establishes a tunnel to the server identified by the target resource.
+
 TRACE: Used for debugging purposes. It echoes back the received request so that the client can see what changes or additions have been made by intermediate servers.
