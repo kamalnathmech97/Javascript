@@ -1,1 +1,13 @@
+   1.The error code Management &  2.manipulating response data : 
 
+   fetch() doesn’t automatically reject the promise in the event of server-side errors, such as HTTP 404 or 500 status codes. 
+   This means that these errors do not trigger the .catch() block
+
+   Axios where such responses would typically be considered exceptions.
+
+   fetch() will resolve the promise normally with the ok status in the response set to false. The call to fetch() will only fail on network failures or if anything has prevented the request from completing.
+
+
+   
+
+ 
