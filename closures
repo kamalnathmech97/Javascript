@@ -57,3 +57,15 @@ OUTPUT :0 1 2 3 4
 
 The let keyword has block scope, which means a new i is created for each iteration of the loop
 
+
+for (var i = 0; i < 5; i++) {
+    (function(i) {
+        setTimeout(function() {
+            console.log(i);
+        }, 1000);
+    })(i);
+}
+
+
+IIFE: Creates a new scope by immediately invoking the function, capturing the current value of i
+
