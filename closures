@@ -55,3 +55,5 @@ for (let i = 0; i < 5; i++) {
 
 OUTPUT :0 1 2 3 4
 
+The let keyword has block scope, which means a new i is created for each iteration of the loop
+
