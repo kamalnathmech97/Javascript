@@ -1,6 +1,20 @@
 API’s work on the CRUD principle. CRUD stands for Create, Read, Update, and Delete.
 The most commonly used API technologies are XMLHttpRequest, Ajax, FetchAPI, and Axios
 
+
+When to Use Each Approach
+Use AJAX API Calls When:
+
+You need to update parts of the UI without reloading the page.
+The operations are not sensitive and can be safely exposed to the client.
+You want to provide a more dynamic and responsive user experience.
+Use Node.js API Calls When:
+
+You need to keep certain operations and data secure and hidden from the client.
+You are aggregating data from multiple sources or performing complex data processing.
+You need to interact with third-party services or perform background tasks.
+
+
 1.XMLHttpRequest 
 
 To send an HTTP request, create an XMLHttpRequest object, open a URL, and send the request. 
@@ -20,9 +34,14 @@ avoiding callback hell and having to remember the complex API of XMLHttpRequest.
 3. AJAX
 
 “Ajax” stands for Asynchronous Javascript And XML, 
+
 AJAX is the art of exchanging data with a server and updating parts of a web page — without reloading the whole page.
 The response is received in a JSON format here so we first need to convert it into a javascript object using JSON.parse() function, 
-now we can use the response obtained from the request as a regular javascript object, it can be logged into the console to test
+now we can use the response obtained from the request as a regular javascript object,
+
+If you need to update a portion of a webpage without refreshing the entire page
+
+
 
 4. axios
 
@@ -41,9 +60,14 @@ leading to the reduced usage of XHR in favor of these newer methods.
 
 2.Use for modern web applications needing a simple and clean way to make HTTP requests.
 Ideal for projects utilizing promises and async/await.
+Performing operations that should not be exposed to the client
+
+adds an additional layer between the client and the final data source, which can increase response times.
+
 
 3.Use if jQuery is already a dependency in the project and you want to leverage its AJAX utilities.
 Suitable for projects that need a quick and simple way to perform AJAX calls with minimal setup.
+Exposing API endpoints directly to the client can make them more vulnerable to attacks.
 
 4.Use for projects needing additional features like request/response interceptors, automatic JSON data handling, or the ability to cancel requests.
 Suitable for both client-side and server-side (Node.js) environments.
