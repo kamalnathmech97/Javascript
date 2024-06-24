@@ -1,0 +1,49 @@
+API’s work on the CRUD principle. CRUD stands for Create, Read, Update, and Delete.
+The most commonly used API technologies are XMLHttpRequest, Ajax, FetchAPI, and Axios
+
+1.XMLHttpRequest 
+
+To send an HTTP request, create an XMLHttpRequest object, open a URL, and send the request. 
+After the transaction completes, the object will contain useful information such as the response body and the HTTP status of the result.
+
+XMLHttpRequest can fetch the data in one of two ways, asynchronously or synchronously. The type of request is dictated by the optional async argument (the third argument) 
+that is set on the XMLHttpRequest.open() method. If this argument is true or not specified, 
+the XMLHttpRequest is processed asynchronously, otherwise, the process is handled synchronously.
+
+
+2. Fetch
+
+fetch() allows you to make network requests similar to XMLHttpRequest (XHR). The main difference is that the Fetch API uses Promises, which enables a simpler and cleaner API,
+avoiding callback hell and having to remember the complex API of XMLHttpRequest.
+
+
+3. AJAX
+
+“Ajax” stands for Asynchronous Javascript And XML, 
+AJAX is the art of exchanging data with a server and updating parts of a web page — without reloading the whole page.
+The response is received in a JSON format here so we first need to convert it into a javascript object using JSON.parse() function, 
+now we can use the response obtained from the request as a regular javascript object, it can be logged into the console to test
+
+4. axios
+
+Axios is a popular promise-based 3rd party library client that has an easy-to-use API and can be used in both browser and node.js, 
+it supports the promise API, also supports the feature to cancel requests and automatically transform JSON data.
+
+has a way to set a response timeout
+has a way to cancel a request
+performs automatic JSON data transformation
+supports upload progress
+
+
+1.While XMLHttpRequest (XHR) is still functional and supported in all modern browsers, the Fetch API and libraries like Axios offer significant improvements in terms of simplicity, readability, and functionality. 
+These modern alternatives align better with contemporary JavaScript development practices, 
+leading to the reduced usage of XHR in favor of these newer methods.
+
+2.Use for modern web applications needing a simple and clean way to make HTTP requests.
+Ideal for projects utilizing promises and async/await.
+
+3.Use if jQuery is already a dependency in the project and you want to leverage its AJAX utilities.
+Suitable for projects that need a quick and simple way to perform AJAX calls with minimal setup.
+
+4.Use for projects needing additional features like request/response interceptors, automatic JSON data handling, or the ability to cancel requests.
+Suitable for both client-side and server-side (Node.js) environments.
