@@ -1,4 +1,6 @@
- A callback is a function that is passed as an argument to another function and is executed after the first function completes its task.
+A callback is a function that is passed as an argument to another function and is executed after the first function completes its task.
+
+Allow a program to continue running other tasks while waiting for an operation to complete
 
 function finalCall(nextRound){
 console.log(" yes")
