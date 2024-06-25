@@ -1,4 +1,4 @@
-a function is passed to another function as an argument is called callback function
+ A callback is a function that is passed as an argument to another function and is executed after the first function completes its task.
 
 function finalCall(nextRound){
 console.log(" yes")
