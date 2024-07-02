@@ -1,4 +1,5 @@
 1.In var, Hoisting  allows to use functions & variables , before they are declared.
+Function declarations are hoisted with both their declaration and definition, making them callable before their place in the code.
 
 To avoid hoisting :
 2.Declare all variables at the beginning of every scope.
