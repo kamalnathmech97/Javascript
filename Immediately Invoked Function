@@ -1,4 +1,7 @@
 An immediately invoked function expression is a way to execute functions, as soon as they are executed.
+The primary purpose of an IIFE is to create a new scope and avoid polluting the global namespace. 
+This is particularly useful for avoiding conflicts between variable names and for maintaining privacy within the function scope.
+
 
 Example:
 (function () {
