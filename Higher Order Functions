@@ -1,5 +1,23 @@
 A higher order function is a function that takes one or more functions as arguments, or returns a function as its result.
 There are several different types of higher order functions like map and reduce.
 
+let arr =[-9,10,2,7,6]
+let data = arr.map((el)=> el*3)
+console.log(data)
 
-Object.entries(), compose()
+let array = [-9, 12, 2, 7, 6];
+let moduled = array.filter((el) => el > 5);
+console.log(moduled); 
+
+let sum = [-9, 12, 2, 7, 6]
+let minima = sum.reduce((accumulator, currentValue)=>{
+  if(currentValue<accumulator){
+    return currentValue
+  }else{
+    return accumulator
+  }
+},Number.MAX_VALUE)
+
+console.log(minima)
+
+
