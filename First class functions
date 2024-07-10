@@ -1,0 +1,4 @@
+Functions Passed as Arguments: Functions can be passed as arguments to other functions (e.g., callbacks).
+Functions Assigned to Variables: Functions can be assigned to variables using function expressions or arrow functions.
+Function Declarations: Functions can be declared using the function keyword.
+First-Class Functions: Functions in JavaScript are first-class citizens, meaning they can be assigned to variables, passed as arguments, and returned from other functions.
