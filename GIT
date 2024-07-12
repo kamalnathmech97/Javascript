@@ -1,0 +1,18 @@
+# Update your local repository
+git pull origin main
+
+# Create and switch to a new branch
+git checkout -b new-branch-name
+
+# Verify the new branch
+git branch
+
+# Make changes, add and commit them
+git add .
+git commit -m "Your commit message"
+
+# Update the new branch with the latest changes from main
+git pull origin main
+
+# Push the new branch to the remote repository
+git push -u origin new-branch-name
